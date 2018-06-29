@@ -1,0 +1,143 @@
+body{
+	background-color: #BACEE6;
+}
+.centro{
+	position: absolute;
+	left: 50%; top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.quadrato{
+	width: 150px; height: 150px;
+
+}
+
+.cerchio{
+	width: 25px; height: 25px;
+	background-color: #36424E;
+	border-radius: 100%;
+}
+
+.pos{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#q1{
+	transform: translate(-50%,-50%) rotate(0deg);
+	animation: spinner1 1s infinite; 
+}
+
+#q2{
+	transform: translate(-50%,-50%) rotate(30deg);
+	animation: spinner2 1s infinite; 
+}
+
+#q3{
+	transform: translate(-50%,-50%) rotate(60deg);
+	animation: spinner3 1s infinite; 
+}
+
+#q4{
+	transform: translate(-50%,-50%) rotate(90deg);
+	animation: spinner4 1s infinite; 
+}
+
+#q5{
+	transform: translate(-50%,-50%) rotate(120deg);
+	animation: spinner5 1s infinite; 
+}
+
+#q6{
+	transform: translate(-50%,-50%) rotate(150deg);
+	animation: spinner6 1s infinite;
+}
+
+#q7{
+	transform: translate(-50%,-50%) rotate(180deg);
+	animation: spinner7 1s infinite;
+}
+
+#q8{
+	transform: translate(-50%,-50%) rotate(210deg);
+	animation: spinner8 1s infinite;
+}
+
+#q9{
+	transform: translate(-50%,-50%) rotate(240deg);
+	animation: spinner9 1s infinite;
+}
+
+#q10{
+	transform: translate(-50%,-50%) rotate(270deg);
+	animation: spinner10 1s infinite;
+}
+
+#q11{
+	transform: translate(-50%,-50%) rotate(300deg);
+	animation: spinner11 1s infinite;
+}
+
+#q12{
+	transform: translate(-50%,-50%) rotate(330deg);
+	animation: spinner12 1s infinite;
+}
+
+@keyframes spinner1{
+	0%{opacity: 1;}
+	50%{opacity: 0;}
+}
+
+@keyframes spinner2{
+	8.3%{opacity: 1;}
+	58.3%{opacity: 0;}
+}
+
+@keyframes spinner3{
+	16.6%{opacity: 1;}
+	66.6%{opacity: 0;}
+}
+
+@keyframes spinner4{
+	24.9%{opacity: 1;}
+	74.9%{opacity: 0;}
+}
+
+@keyframes spinner5{
+	33.2%{opacity: 1;}
+	83.2%{opacity: 0;}
+}
+
+@keyframes spinner6{
+	41.5%{opacity: 1;}
+	91.5%{opacity: 0;}
+}
+
+@keyframes spinner7{
+	49.8%{opacity: 1;}
+	99.8%{opacity: 0;}
+}
+
+@keyframes spinner8{
+	58.1%{opacity: 1;}
+	8.1%{opacity: 0;}
+}
+
+@keyframes spinner9{
+	66.4%{opacity: 1;}
+	16.4%{opacity: 0;}
+}
+
+@keyframes spinner10{
+	74.7%{opacity: 1;}
+	24.7%{opacity: 0;}
+}
+@keyframes spinner11{
+	83%{opacity: 1;}
+	33%{opacity: 0;}
+}
+@keyframes spinner12{
+	91.3%{opacity: 1;}
+	41.3%{opacity: 0;}
+}

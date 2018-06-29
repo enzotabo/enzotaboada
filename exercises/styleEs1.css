@@ -1,0 +1,64 @@
+body{
+	overflow: hidden;
+	background-color:#1A5D63;
+}
+
+.centrato{
+	position: absolute;
+	top:50%; left:50%;
+	transform: translate(-50%,-50%); 
+}
+
+.forma{
+	border-radius: 15%;
+}
+
+.quadrato{
+	background-color: #D81E5B;
+	width: 33vh; height: 33vh;
+}
+
+.ruota{
+	animation: rotate .5s forwards;
+}
+
+.quadratino{
+	background-color: #00BEB2;
+	width: 15vh; height: 15vh;
+	opacity: 0;
+}
+
+.compare{
+	animation: compare 0.3s forwards;
+}
+
+.ruota1{
+	animation: ruota1 1s infinite;
+}
+
+.ruota2{
+	z-index: 10;
+	opacity: 1;
+	animation: ruota2 1s infinite;
+}
+
+
+@keyframes rotate{
+	from {transform: translate(-50%,-50%) rotate(0deg);}
+	to {transform: translate(-50%,-50%) rotate(-225deg);}
+}
+
+@keyframes compare{
+	from{opacity: 0}
+	to{opacity:1}
+}
+
+@keyframes ruota1{
+	from {transform: translate(-50%,-50%) rotate(-225deg);}
+	to {transform: translate(-50%,-50%) rotate(225deg);}
+}
+
+@keyframes ruota2{
+	from {transform: translate(-50%,-50%) rotate(0deg);}
+	to {transform: translate(-50%,-50%) rotate(-360deg);}
+}
