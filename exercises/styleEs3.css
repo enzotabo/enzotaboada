@@ -1,0 +1,66 @@
+body{
+	overflow: hidden;
+	background-color: black;
+}
+
+#sole{
+	width: 100px; height: 100px;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 100;
+}
+
+#terra{
+	width: 50px;
+	position: absolute;
+	top: 50%; right: 0%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+
+#giove{
+	width: 80px;
+	position: absolute;
+	top: 50%; right: 0%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+
+
+.qterra{
+	width: 300px; height: 300px;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+
+.qgiove{
+	width: 500px; height: 500px;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+
+.ruotaterra{
+	animation: ruota1 1s infinite linear;
+}
+
+.ruotagiove{
+	animation: ruota2 2s infinite linear;
+}
+
+@keyframes ruota1{
+	from {transform : translate(-50%,-50%) rotate(0deg);}
+	to {transform : translate(-50%,-50%) rotate(360deg);}
+}
+
+@keyframes ruota2{
+	from {transform : translate(-50%,-50%) rotate(0deg);}
+	to {transform : translate(-50%,-50%) rotate(-360deg);}
+}
+
+
+
