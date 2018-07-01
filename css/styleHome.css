@@ -420,18 +420,17 @@ strong {
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
+    transition: 0.5s;
 }
 
 .fa-facebook-official:before {
     content: "\f230";
 }
 
-.fa{
-  transition: 0.5s;
-}
 
 .fa:hover{
   color: #71A6A1;
+  transform: scale(1.1);
 }
 
 #buffering {
@@ -439,7 +438,7 @@ strong {
   left:0;
   position: absolute;
   height: 100vh;
-  width: 98.7vw;
+  width: 100vw;
   background-color: #282E34;
   z-index: 100;
 }
