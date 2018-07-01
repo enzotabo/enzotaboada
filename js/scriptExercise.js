@@ -72,20 +72,12 @@ $("#Video").on("click",function(){
     filterSelection('video');
   })
 
-$("#Graphic").on("click",function(){
-    filterSelection('graphic');
-  })
-
 $("#Azzecca").on("click",function(){
     filterSelection('azzecca');
   })
 
 $("#Galli").on("click",function(){
     filterSelection('galli');
-  })
-
-$("#DonnaBurgherita").on("click",function(){
-    filterSelection('donna');
   })
 
 $("#Canottieri").on("click",function(){
