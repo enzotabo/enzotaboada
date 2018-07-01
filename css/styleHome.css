@@ -461,31 +461,89 @@ strong {
   to{opacity:0;display:none;z-index: -1;}
 }
 
-.spinner {
-  margin: 0;
-  text-align: center;
+#containerSpinner{
+  width: 50px;
+  height: 33px;
   position: absolute;
   left: 50%; top: 50%;
   transform: translate(-50%,-50%);
 }
 
-.spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #B4D6C6;
-  border-radius: 100%;
-  display: inline-block;
-  animation: ciao 1.4s infinite ease-in-out both;
+#containerSpinner div{
+  background-color: black;
+  z-index: 10;
+  transition: .5s;
 }
 
-.spinner .cerchio1 {
-  animation-delay: -0.24s;
+.vert{
+  height: 33px;
+  width: 6.666px;
 }
 
-.spinner .cerchio2 {
-  animation-delay: -0.12s;
+.oriz{
+  height: 6.666px;
+  width: 30.007px;
 }
 
-@keyframes ciao {
-  0%, 80%, 100% {transform: scale(0);}
-  40% {transform: scale(1.0);}
+#uno{
+  position: absolute;
+  left: 14%;
+  animation: centra1 1s infinite ease-in-out;
+}
+
+#due{
+  position: absolute;
+  right: 14%;  
+  animation: centra2 1s infinite ease-in-out;
+}
+
+#tre{
+  position: absolute;
+  right: 0%;
+  animation: centra3 1s infinite ease-in-out;
+}
+
+#quattro{
+  position: absolute;
+  bottom: 0%;
+  animation: centra4 1s infinite ease-in-out;
+}
+
+#cinque{
+  width: 9.993px;
+  height: 6.666px; 
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  animation: centra5 1s infinite ease-in-out;
+}
+
+@keyframes centra1{
+  0%{left: 14%;}
+  50%{left: 50%; transform: translateX(50%);}
+  100%{left: 14%;}
+}
+
+@keyframes centra2{
+  0%{right: 14%;}
+  50%{right: 50%; transform: translateX(-50%);}
+  100%{right: 14%;}
+}
+
+@keyframes centra3{
+  0%{right: 0%; width: 30.007px;}
+  50%{right: 50%; width: 8px; transform: translateX(50%);}
+  100%{right: 0%; width: 30.007px;}
+}
+
+@keyframes centra4{
+  0%{left: 0%; width: 30.007px;}
+  50%{left: 50%; width: 8px; transform: translateX(-50%);}
+  100%{left: 0%; width: 30.007px;}
+}
+
+@keyframes centra5{
+  0%{left: 50%; top: 50%; transform: translate(-50%,-50%); width: 9.993px;}
+  50%{left: 50%; top: 50%; transform: translate(-50%,-50%); width: 8px;}
+  100%{left: 50%; top: 50%; transform: translate(-50%,-50%); width: 9.993px;}
+}
