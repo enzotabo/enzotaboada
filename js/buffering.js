@@ -3,7 +3,7 @@ $(document).ready(function(){
 	   $.ready.then(function(){
 	   		$("body").removeClass("body_overlay");
 		    $("#buffering").addClass("Scompari");
-		   	$("#img_buffering").addClass("Scompari");
+		   	$(".spinner").addClass("Scompari");
 	   });
 	});
 });

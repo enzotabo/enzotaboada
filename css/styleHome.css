@@ -460,3 +460,32 @@ strong {
   from{opacity:1;display:initial;z-index: 0}
   to{opacity:0;display:none;z-index: -1;}
 }
+
+.spinner {
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #B4D6C6;
+  border-radius: 100%;
+  display: inline-block;
+  animation: ciao 1.4s infinite ease-in-out both;
+}
+
+.spinner .cerchio1 {
+  animation-delay: -0.24s;
+}
+
+.spinner .cerchio2 {
+  animation-delay: -0.12s;
+}
+
+@keyframes ciao {
+  0%, 80%, 100% {transform: scale(0);}
+  40% {transform: scale(1.0);}

@@ -12,7 +12,6 @@ function diventaQuad(){
 }
 
 $("#forma").on("click", function(){
-  alert("ciao");
   	if($("#forma").hasClass("ruota")){
     	$("#forma").removeClass("ruota");
     	$("#forma").addClass("sposta");
