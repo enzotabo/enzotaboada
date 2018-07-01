@@ -1,14 +1,3 @@
-.containerExercise{
-  height: 50%;
-  background-color: transparent;
-  border: solid;
-  border-width: 5px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 .quadrato{
   width : 100px;
   height : 100px;

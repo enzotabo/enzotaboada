@@ -49,13 +49,6 @@ h1 {
     width: 33.33333333%;
 }}
 
-.columnVertVideo{
-  float: center;
-  width: 50%;
-}
-
-
-
 /* Clear floats after rows */ 
 .row:after {
     content: "";
@@ -119,6 +112,10 @@ h1 {
 .contentExercise h4{
   color: #B4D6C6;
   text-align: center;
+}
+
+.contentExercise a{
+  text-decoration-line: none;
 }
 
 #myBtnContainer{

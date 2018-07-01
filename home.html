@@ -9,9 +9,13 @@
   			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   			crossorigin="anonymous">
   	</script>
+  	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/scriptHome.js"></script>
 	</head>
-<body>
+<body class="body_overlay">
+	<div id="buffering">
+		<img id="img_buffering" src="img/LogoET2.png">
+	</div>
 	<!--Menu a comparsa da sinistra da sistemare la chiusura-->
 	<div id="myNav" class="overlay">
 		<a id="bottone2" href="javascript:void(0)" class="closebtn">&times;</a>
@@ -48,7 +52,6 @@
 	</div>
 
 	<div style="background-color:#282E34;padding:50px 80px;">
-	  	<h3 style="text-align:center; color: white;">I am Enzo, a freelance<br>videomaker and phographer<br>based in Lecco.</h3>
 	</div>
 
 	<div class="bgimg-2">
@@ -125,12 +128,50 @@
 		</div><!-- /.footer__inner -->
 
 		<div class="footer__bar">
-			<a id="logoFooterHome" class="logos" href="home.html" style="margin: auto;">
+			<a id="logoFooterHome" class="logos" href="#headerCiaone" style="margin: auto;">
 				<span class="logo"></span>
 			</a>
 		</div><!-- /.footer__bar -->
 	</div><!-- /.shell -->
 </footer><!-- /.footer -->
 
+<script>
+	// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
 </body>
 </html>

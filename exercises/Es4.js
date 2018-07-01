@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$("#quadrato").on("click", function(){
   		$("#quadrato").addClass("sposta");
   		$("#forma").addClass("compare");
@@ -11,6 +12,7 @@ function diventaQuad(){
 }
 
 $("#forma").on("click", function(){
+  alert("ciao");
   	if($("#forma").hasClass("ruota")){
     	$("#forma").removeClass("ruota");
     	$("#forma").addClass("sposta");

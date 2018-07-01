@@ -14,12 +14,6 @@ $(document).ready(function(){
 			closeNav();
 	})
 
-// Top Scroll Buttono
-	$("#logoFooterHome").on("click", function(){
-		topFunction();
-	})
-
-	
 
 	/* Open when someone clicks on the span element */
 	function openNav() {
@@ -35,5 +29,5 @@ $(document).ready(function(){
     	document.body.scrollTop = 0;
     	document.documentElement.scrollTop = 0;
 }
-	
+
 });

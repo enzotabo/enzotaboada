@@ -1,9 +1,9 @@
  @media only screen and (max-device-width: 1024px) {
-    .bgimg-sessionz, .bgimg-patricia, .bgimg-dw, .bgimg-snow, .bgimg-peru, .bgimg-lil, .bgimg-orsm, .bgimg-mt{
+    .bgimg-sessionz, .bgimg-patricia, .bgimg-dw, .bgimg-snow, .bgimg-peru, .bgimg-lil, .bgimg-orsm, .bgimg-mt, .bgimg-madrid{
         background-attachment: scroll;
     }
 }
-.bgimg-sessionz, .bgimg-patricia, .bgimg-dw, .bgimg-snow, .bgimg-peru, .bgimg-lil, .bgimg-orsm, .bgimg-mt{
+.bgimg-sessionz, .bgimg-patricia, .bgimg-dw, .bgimg-snow, .bgimg-peru, .bgimg-lil, .bgimg-orsm, .bgimg-mt, .bgimg-madrid{
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -51,8 +51,14 @@
   min-height: 50%;
 }
 
+.bgimg-madrid {
+  background-image: url("../img/portfolio/madrid/madrid0.jpg");
+  min-height: 50%;
+}
+
+
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-sessionz, .bgimg-patricia, .bgimg-dw, .bgimg-snow, .bgimg-peru, .bgimg-lil, .bgimg-orsm, .bgimg-mt{
+    .bgimg-sessionz, .bgimg-patricia, .bgimg-dw, .bgimg-snow, .bgimg-peru, .bgimg-lil, .bgimg-orsm, .bgimg-mt, .bgimg-madrid{
         background-attachment: scroll;
     }
 }
