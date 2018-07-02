@@ -49,6 +49,10 @@ $("#ShowAll").on("click",function(){
 })
 
 $("#EsEsame").on("click",function(){
+    filterSelection('exam');
+  })
+
+$("#Esercizi").on("click",function(){
     filterSelection('exercises');
   })
 
