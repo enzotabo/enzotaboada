@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Esercizio 1</title>
+	 <script src="jquery.min.js"></script>
+  <style>
+    body{
+  overflow: hidden;
+  background-color: #014034;
+}
+
+.quadrato{
+  width: 500px; height: 500px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.quadratino{
+  width: 50px; height: 50px;
+  background-color: #3BBFA7;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  transition: .5s;
+}
+
+#qPiccolo1{
+  z-index: 5;
+}
+
+#qPiccolo2{
+  z-index: 5;
+}
+
+.muove1{
+  animation: muove1 1s forwards ease-in-out;
+}
+
+.muove2{
+  animation: muove2 1s forwards ease-in-out;
+}
+
+.ruota{
+  animation: ruota 4s forwards ease-in-out;
+}
+
+.centra1{
+  animation: centra1 1s forwards ease-in-out;
+}
+.centra2{
+  animation: centra2 1s forwards ease-in-out;
+}
+
+@keyframes muove1{
+  from{top: 50%; left: 50%;
+  transform: translate(-50%,-50%);}
+  to{top: 50%; left: 0%;
+  transform: translateY(-50%);}
+}
+
+@keyframes muove2{
+  from{top: 50%; left: 50%;
+  transform: translate(-50%,-50%);}
+  to{top: 50%; left: 100%;
+  transform: translate(-100%,-50%);}
+}
+
+@keyframes ruota{
+  from{top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(0deg);}
+  to{top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(1440deg);}
+}
+
+@keyframes centra1{
+  from{top: 50%; left: 0%;
+  transform: translate(0%,-50%);}
+  to{top: 50%; left: 50%;
+  transform: translate(-50%,-50%);}
+}
+
+@keyframes centra2{
+  from{top: 50%; left: 100%;
+  transform: translate(-100%,-50%);}
+  to{top: 50%; left: 50%;
+  transform: translate(-50%,-50%);}
+}
+  </style>
+</head>
+<body>
+
+  <div id="qGrande" class="quadrato centrato">
+  	<div id="qPiccolo1" class="quadratino centrato"></div>
+  	<div id="qPiccolo2" class="quadratino centrato"></div>
+  </div>
+
+</body>
+
+<script>
+  $("#qPiccolo1").on("click", function(){
+    if($("#qPiccolo1").hasClass("centra1"))
+      inizializza();
+    else
+      if($("#qGrande").hasClass("ruota")){
+        $("#qPiccolo1").addClass("centra1");
+        $("#qPiccolo2").addClass("centra2");
+      }
+      else
+        if($("#qPiccolo1").hasClass("muove1"))
+        $("#qGrande").addClass("ruota");
+        else{
+          $("#qPiccolo1").addClass("muove1");
+          $("#qPiccolo2").addClass("muove2");
+        }
+    })
+
+    $("#qPiccolo2").on("click", function(){
+      if($("#qPiccolo1").hasClass("centra1"))
+      inizializza();
+      else
+        if($("#qGrande").hasClass("ruota")){
+          $("#qPiccolo1").addClass("centra1");
+          $("#qPiccolo2").addClass("centra2");
+        }
+        else
+          if($("#qPiccolo1").hasClass("muove1"))
+            $("#qGrande").addClass("ruota");
+          else{
+            $("#qPiccolo1").addClass("muove1");
+            $("#qPiccolo2").addClass("muove2");
+          }
+  })
+
+  function inizializza (){
+    $("#qPiccolo1").removeClass("muove1");
+    $("#qPiccolo1").removeClass("centra1");
+    $("#qPiccolo2").removeClass("muove2");
+    $("#qPiccolo2").removeClass("centra2");
+    $("#qGrande").removeClass("ruota");
+  }
+</script>
+
+</html>
