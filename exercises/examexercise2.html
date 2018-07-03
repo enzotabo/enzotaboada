@@ -75,6 +75,7 @@
 
 
 
+
 @keyframes trasforma{
     from{height: 50px; left: 50%; top: 50%; transform: translate(-50%,-50%);}
     to{height: 100px; left: 50%; top: 50%; transform: translate(-50%,-50%);}
@@ -86,15 +87,15 @@
 }
 
 @keyframes ciao1{
-    0%{left: 50%; top: 0%; transform: translate(-50%,0%); opacity: 1;}
+    0%{left: 50%; top: 0%; transform: translate(-50%,0%); opacity: 1; z-index: 25;}
     90%{left: 50%; top: 50%; transform: translate(-50%,-50%); opacity: 1;}
-    100%{left: 50%; top: 50%; transform: translate(-50%,-50%); opacity: 0;}
+    100%{left: 50%; top: 50%; transform: translate(-50%,-50%); opacity: 0; z-index: 15;}
 }
 
 @keyframes ciao2{
-    0%{left: 50%; bottom: 0%; transform: translate(-50%,0%); opacity: 1;}
+    0%{left: 50%; bottom: 0%; transform: translate(-50%,0%); opacity: 1; z-index: 25;}
     90%{left: 50%; bottom: 50%; transform: translate(-50%,50%); opacity: 1;}
-    100%{left: 50%; bottom: 50%; transform: translate(-50%,50%); opacity: 0;} 
+    100%{left: 50%; bottom: 50%; transform: translate(-50%,50%); opacity: 0; z-index: 15;} 
 }
 
 @keyframes ruota2{
@@ -117,14 +118,23 @@
 
     <script>
         $("#q1").on("click",function(){
-        if($("#q1").hasClass("rettangolo")){
-            $("#q2").addClass("compare");
-            $("#q3").addClass("compare");
-            $("#q1").removeClass("colore");
-        }
-        else{
-            $("#q1").addClass("rettangolo");
-        }
+            if($("#q1").hasClass("ruota2")){
+                $("#q1").removeClass("ruota2");
+                $("#q2").removeClass("compare");
+                $("#q3").removeClass("compare");
+                $("#q2").removeClass("ciao1");
+                $("#q3").removeClass("ciao2");
+            }
+            else
+                if($("#q1").hasClass("rettangolo")){
+                    $("#q2").addClass("compare");
+                    $("#q3").addClass("compare");
+                    $("#q1").removeClass("colore");
+                    }
+                else
+                    $("#q1").addClass("rettangolo");
+        })
+
 
         $("#q2").on("click",function(){
             $("#q2").addClass("ciao1");
@@ -132,7 +142,6 @@
             $("#q1").removeClass("rettangolo");
             $("#q1").addClass("colore");
             $("#q1").addClass("ruota2");
-
         })
 
         $("#q3").on("click",function(){
@@ -141,11 +150,7 @@
             $("#q1").removeClass("rettangolo");
             $("#q1").addClass("colore");
             $("#q1").addClass("ruota2");
-
-
         })
-            
-    })
     </script>
 
 </html>
